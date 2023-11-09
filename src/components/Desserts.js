@@ -4,12 +4,6 @@ import Dessert from './Dessert';
 export default function DessertsList() {
   const [desserts, setDesserts] = useState([]);
   const [selectedDessert, setSelectedDessert] = useState(null);
-  const [updatedDessert, setUpdatedDessert] = useState({
-    name: '',
-    title: '',
-    price: 0,
-  });
-  const [isUpdateFormVisible, setUpdateFormVisible] = useState(false);
 
   useEffect(() => {
     // Fetch data for desserts
@@ -22,24 +16,6 @@ export default function DessertsList() {
 
   const handleSelectDessert = (dessert) => {
     setSelectedDessert(dessert);
-    setUpdateFormVisible(false);
-  };
-
-  const handleUpdateFormChange = (e) => {
-    const { name, value } = e.target;
-    setUpdatedDessert({
-      ...updatedDessert,
-      [name]: value,
-    });
-  };
-
-  const handleShowUpdateForm = () => {
-    setUpdateFormVisible(true);
-    setUpdatedDessert({
-      name: selectedDessert.name,
-      title: selectedDessert.title,
-      price: selectedDessert.price,
-    });
   };
 
   const handleUpdateDessert = () => {
@@ -49,15 +25,17 @@ export default function DessertsList() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(updatedDessert),
+      body: JSON.stringify({
+        title: selectedDessert.title,
+        price: selectedDessert.price,
+        image: selectedDessert.image,
+      }),
     })
       .then((res) => res.json())
       .then((data) => {
         const updatedDesserts = desserts.map((d) => (d.id === data.id ? data : d));
         setDesserts(updatedDesserts);
         setSelectedDessert(null);
-        setUpdatedDessert({ name: '', title: '', price: 0 });
-        setUpdateFormVisible(false);
         alert('Dessert updated!');
       });
   };
@@ -80,35 +58,75 @@ export default function DessertsList() {
       <div className='container row'>
         <div className='col-md-6'>
           <h2>All Desserts</h2>
-          {desserts.length < 1 && (
+          {desserts.length < 1 ? (
             <p className='alert alert-warning'>There are no desserts</p>
+          ) : (
+            desserts.map((dessert) => (
+              <Dessert
+                key={dessert.id}
+                dessert={dessert}
+                onSelect={handleSelectDessert}
+                onDelete={handleDeleteDessert}
+              />
+            ))
           )}
-          {desserts.map((dessert) => (
-            <Dessert
-              key={dessert.id}
-              dessert={dessert}
-              onSelect={handleSelectDessert}
-              onDelete={handleDeleteDessert}
-              onUpdate={handleUpdateDessert}
-              showUpdateForm={selectedDessert && selectedDessert.id === dessert.id && isUpdateFormVisible}
-              updateFormValues={updatedDessert}
-              onFormChange={handleUpdateFormChange}
-              onShowUpdateForm={handleShowUpdateForm}
-            />
-          ))}
         </div>
         <div className='col-md-6'>
           {selectedDessert ? (
             <div>
               <h2>Edit Dessert</h2>
-              <Dessert
-                dessert={selectedDessert}
-                onUpdate={handleUpdateDessert}
-                showUpdateForm={isUpdateFormVisible}
-                updateFormValues={updatedDessert}
-                onFormChange={handleUpdateFormChange}
-                onShowUpdateForm={handleShowUpdateForm}
-              />
+              <div className="form-group">
+                <label htmlFor="title">Title</label>
+                <input
+                  type="text"
+                  value={selectedDessert.title}
+                  onChange={(e) =>
+                    setSelectedDessert((prevState) => ({
+                      ...prevState,
+                      title: e.target.value,
+                    }))
+                  }
+                  className="form-control"
+                  id="title"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="price">Price</label>
+                <input
+                  type="text"
+                  value={selectedDessert.price}
+                  onChange={(e) =>
+                    setSelectedDessert((prevState) => ({
+                      ...prevState,
+                      price: e.target.value,
+                    }))
+                  }
+                  className="form-control"
+                  id="price"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="image">Image</label>
+                <input
+                  type="text"
+                  value={selectedDessert.image}
+                  onChange={(e) =>
+                    setSelectedDessert((prevState) => ({
+                      ...prevState,
+                      image: e.target.value,
+                    }))
+                  }
+                  className="form-control"
+                  id="image"
+                />
+              </div>
+              <button
+                type="button"
+                onClick={handleUpdateDessert}
+                className="btn btn-primary"
+              >
+                Update
+              </button>
             </div>
           ) : (
             <p>No dessert selected</p>
@@ -118,6 +136,7 @@ export default function DessertsList() {
     </div>
   );
 }
+
 
 
 
