@@ -45,12 +45,20 @@ export default function DessertsList() {
     fetch(`http://localhost:4000/dessert/${dessertId}`, {
       method: "DELETE",
     })
-      .then(() => {
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Failed to delete dessert with id ${dessertId}`);
+        }
         const updatedDesserts = desserts.filter((d) => d.id !== dessertId);
         setDesserts(updatedDesserts);
         setSelectedDessert(null);
+      })
+      .catch((error) => {
+        console.error('Error deleting dessert:', error);
+        alert('Failed to delete dessert. Please try again.');
       });
   };
+  
 
   return (
     <div className='container p-2'>

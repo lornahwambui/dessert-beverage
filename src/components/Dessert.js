@@ -1,23 +1,34 @@
 import React from 'react';
 
-export default function Dessert({ dessert, onSelect,  onDelete }) {
- 
+export default function Dessert({ dessert, onSelect, onDelete }) {
+  const handleEdit = () => {
+    onSelect(dessert);
+  };
+
+  const handleDelete = () => {
+    onDelete(dessert.id); // Pass the dessert ID to the onDelete function
+  };
 
   return (
-    <div className="col-m-4 mb-4"> {/* Apply Bootstrap classes for column and margin */}
+    <div className="col-m-4 mb-4">
       <div className="card">
-        <img src={dessert.image} alt={dessert.name} className="card-img-top" /> {/* Apply Bootstrap classes for the image */}
+        <img src={dessert.image} alt={dessert.name} className="card-img-top" />
         <div className="card-body">
           <h5 className="card-title">{dessert.title}</h5>
           <p className="card-text">Title: {dessert.title}</p>
           <p className="card-text">Price: {dessert.price}</p>
-          <button onClick={()=>onSelect(dessert)} className="btn btn-primary">Edit</button>
-          <button onClick={()=>onDelete(dessert)} className="btn btn-danger">Delete</button>
+          <button onClick={handleEdit} className="btn btn-primary">
+            Edit
+          </button>
+          <button onClick={handleDelete} className="btn btn-danger">
+            Delete
+          </button>
         </div>
       </div>
     </div>
   );
 }
+
 
 
 
