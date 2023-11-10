@@ -1,7 +1,7 @@
 #### The is a dessert and beverage project, 10/11/2023
 #### **By Lornah Gitau**
 ## Project Description
-Welcome to the Dessert & Beverage website, where you can explore and indulge in delightful desserts and beverages. This project is a React-based web application that allows users to view, edit, add, and delete dessert items. The application is structured into various components, layouts, and pages.
+Welcome to the Dessert & Beverage website, where you can explore delightful desserts and beverages. This project is a React-based web application that allows users to view, edit, add, and delete dessert items. The application is structured into various components, layouts, and pages.
 #### Components
 ##  Dessert Component
 
