@@ -1,9 +1,8 @@
-#### The is a catfacts project, 11/10/2023
+#### The is a dessert and beverage project, 11/10/2023
 #### **By Lornah Gitau**
 ## Project Description
     
-This project consists of one web page:  for sharing interesting cat-related information, also known as "Meows Facts." The project is designed to provide users with fun and fascinating facts about cats.
-  - The "Meows Facts" page focuses on sharing interesting cat-related facts, and it allows users to view, add, edit, and delete Meows facts.
+Welcome to the Dessert & Beverage website, where you can explore and indulge in delightful desserts and beverages. This project is a React-based web application that allows users to view, edit, add, and delete dessert items. The application is structured into various components, layouts, and pages.
 ## Setup/Installation Requirements
 ## Meows Facts Page
 
