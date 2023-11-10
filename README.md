@@ -30,8 +30,8 @@ Layout component (Layout.js) is a higher-order component that wraps the entire a
 ### Getting Started
 
    1. Clone this repository to your local machine.
-   2. run your server json-server --watch database.json --port 4000
-   3. Open your browser and navigate to http://localhost:3000 to view the Dessert & Beverage website.
+   2. run your server json-server node server .js
+   3. Open your browser and navigate to https://master--sprightly-elf-f4d2ef.netlify.app/ to view the Dessert & Beverage website.
    4. To add, edit, or delete facts, you'll need to host the project on a web server and set up the server backend. 
 
  ## Known Bugs
