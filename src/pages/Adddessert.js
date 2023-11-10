@@ -22,39 +22,83 @@ export default function AddDessert() {
     })
       .then((res) => res.json())
       .then(() => {
-        alert('New dessert added!'); 
-        setNewDessert({ image: '', title: '', price: '' }); 
+        alert('New dessert added!');
+        setNewDessert({ image: '', title: '', price: '' });
       });
   };
 
   return (
-    <div>
-      <h2>Add New Dessert</h2>
-      <input
-        type="text"
-        placeholder="Image"
-        name="image"
-        value={newDessert.image}
-        onChange={handleInputChange}
-      />
-      <input
-        type="text"
-        placeholder="Title"
-        name="title"
-        value={newDessert.title}
-        onChange={handleInputChange}
-      />
-      <input
-        type="number"
-        placeholder="Price"
-        name="price"
-        value={newDessert.price}
-        onChange={handleInputChange}
-      />
-      <button onClick={handleAddDessert}>Add Dessert</button>
+    <div style={styles.container}>
+      <h2 style={styles.heading}>Add New Dessert</h2>
+      <form style={styles.form}>
+        <div className="form-group">
+          <label htmlFor="image" style={styles.label}>
+            Image URL
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="image"
+            placeholder="Enter Image URL"
+            name="image"
+            value={newDessert.image}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="title" style={styles.label}>
+            Title
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="title"
+            placeholder="Enter Title"
+            name="title"
+            value={newDessert.title}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="price" style={styles.label}>
+            Price
+          </label>
+          <input
+            type="number"
+            className="form-control"
+            id="price"
+            placeholder="Enter Price"
+            name="price"
+            value={newDessert.price}
+            onChange={handleInputChange}
+          />
+        </div>
+        <button type="button" className="btn btn-primary" onClick={handleAddDessert}>
+          Add Dessert
+        </button>
+      </form>
     </div>
   );
 }
+
+const styles = {
+  container: {
+    padding: '20px',
+    maxWidth: '400px',
+    margin: 'auto',
+  },
+  heading: {
+    textAlign: 'center',
+    marginBottom: '20px',
+  },
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  label: {
+    marginBottom: '5px',
+  },
+};
 
 
 

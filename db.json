@@ -59,6 +59,12 @@
       "price": "$15",
       "image": "https://img.delicious.com.au/l-x5GcWF/del/2020/07/burnt-butter-almond-and-honey-cake-135325-2.jpg",
       "id": 10
+    },
+    {
+      "title": "Make afternoon tea plans with this chocolate and ginger teacake",
+      "price": "$31",
+      "image": "https://img.delicious.com.au/AE5s4DQB/del/2020/03/banoffee-cream-pudding-with-white-choc-crumble-128938-1.jpg",
+      "id": 11
     }
   ]
 }

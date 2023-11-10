@@ -35,7 +35,7 @@ Layout component (Layout.js) is a higher-order component that wraps the entire a
    4. To add, edit, or delete facts, you'll need to host the project on a web server and set up the server backend. 
 
  ## Known Bugs
-    application works perfectly well, no bugs.
+    Application works perfectly well, no bugs.
 
 ## Technologies used
     - CSS
