@@ -6,7 +6,7 @@ export default function Dessert({ dessert, onSelect, onDelete }) {
   };
 
   const handleDelete = () => {
-    onDelete(dessert.id); // Pass the dessert ID to the onDelete function
+    onDelete(dessert.id); 
   };
 
   return (
