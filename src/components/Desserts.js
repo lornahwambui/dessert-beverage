@@ -7,7 +7,7 @@ export default function DessertsList() {
 
   useEffect(() => {
     // Fetch data for desserts
-    fetch("http://localhost:4000/dessert")
+    fetch("https://dessert-and-beverage.onrender.com/dessert")
       .then((res) => res.json())
       .then((data) => {
         setDesserts(data);
@@ -20,7 +20,7 @@ export default function DessertsList() {
 
   const handleUpdateDessert = () => {
     // Send a PUT request to update the selected dessert
-    fetch(`http://localhost:4000/dessert/${selectedDessert.id}`, {
+    fetch(`https://dessert-and-beverage.onrender.com/dessert/${selectedDessert.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export default function DessertsList() {
 
   const handleDeleteDessert = (dessertId) => {
     // Send a DELETE request to delete a dessert
-    fetch(`http://localhost:4000/dessert/${dessertId}`, {
+    fetch(`https://dessert-and-beverage.onrender.com/dessert/${dessertId}`, {
       method: "DELETE",
     })
       .then((res) => {

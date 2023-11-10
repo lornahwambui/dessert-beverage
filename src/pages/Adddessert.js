@@ -13,7 +13,7 @@ export default function AddDessert() {
 
   const handleAddDessert = () => {
     // Send a POST request to create a new dessert
-    fetch("http://localhost:4000/dessert", {
+    fetch("https://dessert-and-beverage.onrender.com/dessert", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -6,7 +6,7 @@ export default function Details() {
     const [dessert, setDessert] = useState({}); // Renamed from setUser for clarity
 
     useEffect(() => {
-        fetch(`http://localhost:4000/dessert/${id}`)
+        fetch(`https://dessert-and-beverage.onrender.com/dessert/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setDessert(data); // Renamed from setUser for clarity
