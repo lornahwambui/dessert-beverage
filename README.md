@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+#### The is a catfacts project, 11/10/2023
+#### **By Lornah Gitau**
+## Project Description
+    
+This project consists of one web page:  for sharing interesting cat-related information, also known as "Meows Facts." The project is designed to provide users with fun and fascinating facts about cats.
+  - The "Meows Facts" page focuses on sharing interesting cat-related facts, and it allows users to view, add, edit, and delete Meows facts.
+## Setup/Installation Requirements
+## Meows Facts Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Features
 
-## Available Scripts
+- View a list of Meows facts.
+- Add new Meows facts by providing a description and an image URL.
+- Edit existing Meows facts.
+- Delete Meows facts.
 
-In the project directory, you can run:
+### Getting Started
 
-### `npm start`
+   1. Clone this repository to your local machine.
+   2.run your server json-server --watch database.json --port 5000
+   3. Open the "Meows Facts" page (`visit-site.html`) in your web browser to view Meows facts.
+   4. To add, edit, or delete facts, you'll need to host the project on a web server and set up the server backend. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ ## Known Bugs
+    The application images dissapears in heroku
+    Otherwise application works perfectly well, no bugs.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies used
+    - JS
+    - HTML and CSS
+    - Fontawesome
+    - BOOTSRAP
+    - Javascript
 
-### `npm test`
+## Support and contact details
+    - email :: lornah.gitau@student.moringaschool.com
+    - phone :: +25479990055552
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### License
+*Licenced under the MIT Licence
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Copyright (c) 2023 lornahwambui
